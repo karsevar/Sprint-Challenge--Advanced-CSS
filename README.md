@@ -34,13 +34,28 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+Adaptive webpages utilize absolute units with media break points to create a website experience for both mobile and desktop users. Adaptive design can be likened to static design in that they both use the same type of units (pixels in place of percentages) but the main difference between the two is that static doesn't utilize media queries. Through media queries, adaptive websites are able to change its layout at preprogrammed break points (customary break points: 800px; desktop, 600px; tablet, and 500px or 400px; phone).
+
+Responsive websites utilize media queries with relative units (like percentages and ems). Thus allowing for a more 'fluid' experience between each preprogrammed media break point when a user resizes their screen. The close cousin to responsive design is fluid in that they both use relative units but again (just like static and adaptive) the later doesn't use media queries to change its layout. 
+
+
 2. Describe what it means to be mobile first vs desktop first.
+
+Mobile first means that you are first designing a website at 500px or 400px width and are planning on changing the layout for tablets and desktops through media query breakpoints.
+
+Desktop first means the exact opposite of mobile first in that you are initially creating CSS rules for screen sizes of 800px and above and that through media query break points you are planning on changing the webpage layout for mobile.    
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
+'rem' units reference the root while 'em' units reference the immediate parent of the current element and because the main root of a website is the html element every 'rem' rule will reference any font-size CSS rule within it. As for the 62.5%, it's only an approximation of 10px text font since it is assumed that 16px is the default web browser font and in addition setting the font size as a percentage allows the end user to resize the font of your webpage.
+
 4. How would you describe preprocessing to someone new to CSS?
 
+Preprocessing is a method (or rather a program) used to change easy to understand and implement syntax (namely the nesting syntax and mixins of less) into verbose vanilla CSS rules. This is very similar to the transpiler within Java. 
+
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+My favorite concept of preprocessing is nesting and import because it allows you to modularize your CSS rules into many smaller easy to maintain files (much like the way python projects are implemented). The concept that gives me the most trouble (even though we did not cover it in class) is creating for loops and if statements within less as I find it a little daunting to combine programming with CSS. In addition, where to place the media queries within the nesting hierarchy kind of gave me a little trouble yesterday.
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
