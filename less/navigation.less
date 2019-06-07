@@ -9,10 +9,14 @@
 
     .nav-container {
         height: 100%;
+        .flexDisplay(column, space-around, center);
+        
+        /*
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        */
 
         h2 {
             font-size: 3rem;
@@ -21,13 +25,20 @@
 
     .nav {
         width: 350px;
+        .flexDisplay(row, space-evenly, center);
+
+        /*
         display: flex;
         justify-content: space-evenly;
+        */
 
         a {
-            font-size: 1.4rem;
+            .nav-anchor(1.6rem, none, @nav-font);
+            /*
+            font-size: 1.6rem;
             text-decoration: none;
             color: @nav-font
+            */
         }
     }
 }
